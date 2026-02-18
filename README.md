@@ -3,6 +3,8 @@
 This repository works as the front-end of the task manager app
 - Back-end:
 https://github.com/AldwinCantago01/TaskManager-Backend
+- Docker container deployment
+https://github.com/AldwinCantago01/TaskManager-DockerContainer
 
 ## Tech Stack
 
