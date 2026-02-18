@@ -1,48 +1,43 @@
-# frontend
+# Task Manager Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+This repository works as the front-end of the task manager app
 
-## Recommended IDE Setup
+## Tech Stack
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- [Vue 3](https://vuejs.org/) + TypeScript
+- [Pinia](https://pinia.vuejs.org/) for state
+- SCSS styling (BEM Methodology)
+- JWT authentication
 
-## Recommended Browser Setup
+## Features
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- User login/register
+- Auth bootstrap on app startup
+- Protected routes (`/tasks`, `/tasks/add`, `/tasks/edit/:id`)
 
-## Type Support for `.vue` Imports in TS
+## Prerequisites
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+- Node.js `^20.19.0 || >=22.12.0` (from [package.json](package.json))
+- npm
 
-## Customize configuration
+## Environment
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Create a `.env` file in project root:
 
-## Project Setup
-
-```sh
-npm install
+```env
+VITE_API_URL=http://localhost:3000
 ```
 
-### Compile and Hot-Reload for Development
+Notes:
 
-```sh
+- During local dev, `/api` is proxied via [vite.config.ts](vite.config.ts).
+- In Docker/Nginx, `/api` is forwarded using [nginx.conf](nginx.conf).
+
+## Install & Run (dev)
+
+```bash
+npm install
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+App runs with Vite dev server (default: `http://localhost:5173`).
