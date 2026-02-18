@@ -12,8 +12,10 @@ This repository works as the front-end of the task manager app
 ## Features
 
 - User login/register
-- Auth bootstrap on app startup
+- Authentication using JWT
 - Protected routes (`/tasks`, `/tasks/add`, `/tasks/edit/:id`)
+- JWT compliant custom fetches for API calls
+- CRUD pages for task management
 
 ## Prerequisites
 
