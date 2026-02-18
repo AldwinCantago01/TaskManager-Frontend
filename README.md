@@ -1,6 +1,8 @@
 # Task Manager Frontend
 
 This repository works as the front-end of the task manager app
+- Back-end:
+https://github.com/AldwinCantago01/TaskManager-Backend
 
 ## Tech Stack
 
